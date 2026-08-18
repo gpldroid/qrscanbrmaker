@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- -->
+    <meta name="description" content="منصة QR Pro Tools - أداة مجانية واحترافية لإنشاء وفحص رموز الـ QR للروابط، شبكات الواي فاي، جهات الاتصال، والرسائل بكل أمان وسرعة.">
+    <meta name="keywords" content="QR code, مولد QR, فحص QR, QR generator, QR scanner, واي فاي QR, vCard QR, أداة كيو آر">
+    <meta name="author" content="QR Pro Tools">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4f46e5">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="QR Pro Tools - أدوات QR الاحترافية">
+    <meta property="og:description" content="منصة متكاملة لإنشاء وفحص رموز QR بكل سهولة وأمان بدون الحاجة لرفع بياناتك.">
+    <meta property="og:image" content="https://placehold.co/1200x630/4f46e5/ffffff?text=QR+Pro+Tools">
+
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="QR Pro Tools - أدوات QR الاحترافية">
+    <meta property="twitter:description" content="منصة متكاملة لإنشاء وفحص رموز QR بكل سهولة وأمان بدون الحاجة لرفع بياناتك.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/4f46e5/ffffff?text=QR+Pro+Tools">
+
+    <title>QR Pro Tools - أدوات QR الاحترافية</title>
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- QR Scanner & Generator Libraries -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+    <div id="qr-pro-tools">
+        <!-- Sticky Navigation -->
+        <header class="navbar">
+            <a href="#" class="brand js-event-1">
+                <i class="fa-solid fa-qrcode"></i>
+                <span data-i18n="app_title">QR Pro Tools</span>
+            </a>
+            
+            <nav class="nav-links">
+                <button class="nav-btn active-nav js-event-2" id="btn-nav-home">
+                    <i class="fa-solid fa-house"></i>
+                    <span data-i18n="nav_home">الرئيسية</span>
+                </button>
+                <button class="nav-btn js-event-3" id="btn-nav-decoder">
+                    <i class="fa-solid fa-expand"></i>
+                    <span data-i18n="nav_decode">فحص</span>
+                </button>
+                <button class="nav-btn js-event-4" id="btn-nav-generator">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span data-i18n="nav_generate">إنشاء</span>
+                </button>
+            </nav>
+
+            <div class="nav-controls">
+                <button class="icon-btn js-event-5" id="themeToggle" aria-label="تبديل الوضع">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="icon-btn js-event-6" id="langToggle" aria-label="تبديل اللغة">EN</button>
+            </div>
+        </header>
+
+        <main class="container">
+            
+            <!-- Home Section -->
+            <section id="home" class="section active">
+                <div class="ad-slot-wrapper">
+                    <span class="ad-label" data-i18n="ad_label">إعلان / Advertisement</span>
+                    <div class="ad-placeholder lazy-ad" data-ad-slot="home-top">
+                        <!-- Google AdSense Code Placeholder -->
+                        <ins class="adsbygoogle inline-final-217009"
+                            
+                             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                             data-ad-slot="1234567890"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <span>مساحة إعلانية أعلى الصفحة (Responsive Leaderboard)</span>
+                    </div>
+                </div>
+
+                <div class="text-center inline-style-1">
+                    <i class="fa-solid fa-qrcode inline-style-2"></i>
+                    <h1 data-i18n="home_head">أدوات QR الاحترافية</h1>
+                    <p class="inline-style-3" data-i18n="home_desc">
+                        منصة متكاملة وسريعة لإنشاء وفحص رموز QR للروابط، شبكات الواي فاي، جهات الاتصال، والمزيد بكل سهولة وأمان.
+                    </p>
+                    
+                    <div class="grid grid-2 inline-style-4">
+                        <button class="btn btn-primary js-event-7">
+                            <i class="fa-solid fa-plus"></i> 
+                            <span data-i18n="btn_start_gen">إنشاء رمز QR</span>
+                        </button>
+                        <button class="btn btn-outline js-event-8">
+                            <i class="fa-solid fa-camera"></i> 
+                            <span data-i18n="btn_start_scan">فحص رمز QR</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Features Cards -->
+                <div class="grid grid-3 inline-style-5">
+                    <div class="how-to-card text-center">
+                        <i class="fa-solid fa-bolt inline-style-6"></i>
+                        <h3 data-i18n="feat_1_title">سريع ومباشر</h3>
+                        <p data-i18n="feat_1_desc">فحص ومعالجة فورية بدون الحاجة إلى رفع بياناتك إلى خوادم خارجية.</p>
+                    </div>
+                    <div class="how-to-card text-center">
+                        <i class="fa-solid fa-palette inline-style-6"></i>
+                        <h3 data-i18n="feat_2_title">تخصيص كامل</h3>
+                        <p data-i18n="feat_2_desc">تحكم بالألوان، الأحجام، ودرجة تصحيح الخطأ لإنشاء رمز يناسب علامتك التجارية.</p>
+                    </div>
+                    <div class="how-to-card text-center">
+                        <i class="fa-solid fa-shield-halved inline-style-6"></i>
+                        <h3 data-i18n="feat_3_title">خصوصية مطلقة</h3>
+                        <p data-i18n="feat_3_desc">تعمل جميع العمليات داخل متصفحك بشكل آمن 100% لحماية بياناتك الشخصية.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="decoder" class="section">
+                <h2><i class="fa-solid fa-expand inline-style-7"></i> <span data-i18n="decoder_title">الفاحص الذكي</span></h2>
+                <p data-i18n="decoder_subtitle">افحص رموز QR باستخدام كاميرا جهازك أو ارفع صورة من المكونات المخزنة لديك.</p>
+                
+                <div>
+                    <div id="reader"></div>
+                </div>
+                
+                <div class="grid grid-2 inline-style-8">
+                    <button id="camBtn" class="btn btn-primary js-event-9">
+                        <i class="fa-solid fa-video"></i> 
+                        <span id="camBtnText" data-i18n="btn_start_cam">تشغيل الكاميرا</span>
+                    </button>
+                    
+                    <div class="file-upload-wrapper js-event-10">
+                        <input type="file" id="qr-file" accept="image/*" class="hidden js-event-11">
+                        <i class="fa-solid fa-cloud-arrow-up inline-style-9"></i>
+                        <div class="inline-style-10" data-i18n="or_file">اختر صورة للفحص</div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 data-i18n="result_title">نتيجة الفحص:</h3>
+                    <div class="inline-style-12" id="decodeResult" data-i18n="waiting_scan">بانتظار الفحص...</div>
+                    
+                    <div>
+                        <button class="btn btn-sm btn-primary hidden js-event-12" id="copyResultBtn">
+                            <i class="fa-regular fa-copy"></i> 
+                            <span data-i18n="copy_btn">نسخ النص</span>
+                        </button>
+                        <button class="btn btn-sm btn-outline hidden js-event-13" id="openLinkBtn">
+                            <i class="fa-solid fa-up-right-from-square"></i> 
+                            <span data-i18n="open_link_btn">فتح الرابط</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="ad-slot-wrapper inline-style-11">
+                    <span class="ad-label" data-i18n="ad_label">إعلان / Advertisement</span>
+                    <div class="ad-placeholder lazy-ad" data-ad-slot="decoder-bottom">
+                        <ins class="adsbygoogle inline-final-217009"
+                            
+                             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                             data-ad-slot="1234567891"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <span>مساحة إعلانية أسفل نتيجة الفحص</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="generator" class="section">
+                <h2><i class="fa-solid fa-wand-magic-sparkles inline-style-7"></i> <span data-i18n="generator_title">منشئ الرموز</span></h2>
+                <p data-i18n="generator_subtitle">اختر نوع المحتوى وقم بتخصيص الألوان للحصول على رمز QR احترافي.</p>
+                
+                <div class="grid grid-2 inline-style-8">
+                    <!-- Generator Inputs Form -->
+                    <div>
+                        <div class="form-group">
+                            <label data-i18n="type_label">نوع المحتوى:</label>
+                            <select class="js-event-14" id="qrType">
+                                <option value="url" data-i18n="opt_url">🔗 رابط / URL</option>
+                                <option value="text" data-i18n="opt_text">📝 نص / Text</option>
+                                <option value="wifi" data-i18n="opt_wifi">📶 واي فاي / Wi-Fi</option>
+                                <option value="vcard" data-i18n="opt_vcard">👤 جهة اتصال / Contact</option>
+                                <option value="whatsapp" data-i18n="opt_wa">💬 واتساب / WhatsApp</option>
+                                <option value="email" data-i18n="opt_email">✉️ بريد إلكتروني / Email</option>
+                            </select>
+                        </div>
+
+                        <!-- URL / Plain Text Input -->
+                        <div id="simpleBox" class="form-group">
+                            <label data-i18n="lbl_content">المحتوى / الرابط:</label>
+                            <input class="js-event-15" type="text" id="qrInput" placeholder="https://example.com">
+                        </div>
+
+                        <!-- Wi-Fi Inputs -->
+                        <div id="wifiBox" class="hidden">
+                            <div class="form-group">
+                                <label data-i18n="lbl_ssid">اسم الشبكة (SSID)</label>
+                                <input class="js-event-16" type="text" id="ssid" placeholder="My Home Network">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="lbl_password">كلمة المرور</label>
+                                <input class="js-event-17" type="password" id="pass" placeholder="••••••••">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="lbl_encryption">نوع التشفير</label>
+                                <select class="js-event-18" id="encryption">
+                                    <option value="WPA">WPA/WPA2</option>
+                                    <option value="WEP">WEP</option>
+                                    <option value="nopass" data-i18n="opt_open">مفتوحة (بدون)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- vCard Inputs -->
+                        <div id="vcardBox" class="hidden">
+                            <div class="grid grid-2">
+                                <div class="form-group">
+                                    <label data-i18n="lbl_fname">الاسم الأول</label>
+                                    <input class="js-event-19" type="text" id="vcFirst" placeholder="محمد">
+                                </div>
+                                <div class="form-group">
+                                    <label data-i18n="lbl_lname">اسم العائلة</label>
+                                    <input class="js-event-20" type="text" id="vcLast" placeholder="علي">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="lbl_phone">رقم الهاتف</label>
+                                <input class="js-event-21" type="tel" id="vcPhone" placeholder="+1234567890">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="lbl_email">البريد الإلكتروني</label>
+                                <input class="js-event-22" type="email" id="vcEmail" placeholder="name@domain.com">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="lbl_company">الشركة / المؤسسة</label>
+                                <input class="js-event-23" type="text" id="vcCompany" placeholder="اسم الشركة">
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Inputs -->
+                        <div id="waBox" class="hidden">
+                            <div class="form-group">
+                                <label data-i18n="lbl_wa_num">رقم الواتساب (مع رمز الدولة)</label>
+                                <input class="js-event-24" type="tel" id="waPhone" placeholder="966500000000">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="lbl_wa_msg">رسالة مجهزة (اختياري)</label>
+                                <textarea class="js-event-25" id="waMsg" placeholder="مرحباً، أود الاستفسار عن..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Email Inputs -->
+                        <div id="emailBox" class="hidden">
+                            <div class="form-group">
+                                <label data-i18n="lbl_email_to">المستلم</label>
+                                <input class="js-event-26" type="email" id="emailTo" placeholder="contact@domain.com">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="lbl_email_sub">الموضوع</label>
+                                <input class="js-event-27" type="text" id="emailSub" placeholder="استفسار بشأن الخدمة">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="lbl_email_body">نص الرسالة</label>
+                                <textarea class="js-event-28" id="emailBody" placeholder="أهلاً بك..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Color Customization -->
+                        <div class="form-group">
+                            <label data-i18n="color_custom">تخصيص الألوان:</label>
+                            <div class="color-row">
+                                <div class="color-item">
+                                    <input class="js-event-29" type="color" id="qrColorDark" value="#000000">
+                                    <span data-i18n="color_fg">الرمز</span>
+                                </div>
+                                <div class="color-item">
+                                    <input class="js-event-30" type="color" id="qrColorLight" value="#ffffff">
+                                    <span data-i18n="color_bg">الخلفية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Preview & Export -->
+                    <div>
+                        <div class="qr-preview-box">
+                            <div id="qrcode"></div>
+                            <p class="inline-style-15" data-i18n="preview_note">معاينة مباشرة للرمز</p>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-primary js-event-31">
+                                <i class="fa-solid fa-download"></i> 
+                                <span data-i18n="btn_dl_png">تحميل PNG</span>
+                            </button>
+                            <button class="btn btn-outline js-event-32">
+                                <i class="fa-regular fa-copy"></i> 
+                                <span data-i18n="btn_copy_img">نسخ الصورة</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ad-slot-wrapper inline-style-11">
+                    <span class="ad-label" data-i18n="ad_label">إعلان / Advertisement</span>
+                    <div class="ad-placeholder lazy-ad ad-placeholder-rectangle" data-ad-slot="generator-bottom">
+                        <ins class="adsbygoogle inline-final-217009"
+                            
+                             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                             data-ad-slot="1234567892"
+                             data-ad-format="rectangle"
+                             data-full-width-responsive="true"></ins>
+                        <span>مساحة إعلانية (Responsive Rectangle)</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Privacy Policy Section -->
+            <section id="privacy" class="section">
+                <h2><i class="fa-solid fa-shield-halved inline-style-7"></i> <span data-i18n="nav_privacy">سياسة الخصوصية</span></h2>
+                <div class="how-to-card inline-style-8">
+                    <h3 data-i18n="priv_title_1">حماية البيانات والخصوصية</h3>
+                    <p data-i18n="priv_desc_1">نحن نأخذ خصوصيتك بجدية تامة. جميع عمليات إنشاء وفحص رموز QR تتم محلياً 100% داخل متصفحك دون إرسال أي بيانات شخصية إلى خوادم خارجية.</p>
+                    <h3 data-i18n="priv_title_2">ملفات تعريف الارتباط (Cookies)</h3>
+                    <p data-i18n="priv_desc_2">نستخدم التخزين المحلي فقط لحفظ تفضيلات المستخدم مثل وضع الألوان (داكن/فاتح) واللغة المحددة. يمكنك قبول أو رفض ذلك في أي وقت.</p>
+                </div>
+            </section>
+
+            <!-- Terms of Use Section -->
+            <section id="terms" class="section">
+                <h2><i class="fa-solid fa-file-contract inline-style-7"></i> <span data-i18n="nav_terms">شروط الاستخدام</span></h2>
+                <div class="how-to-card inline-style-8">
+                    <h3 data-i18n="terms_title_1">الاستخدام المقبول</h3>
+                    <p data-i18n="terms_desc_1">أداة QR Pro Tools مجانية للاستخدام الشخصي والتجاري. يُحظر استخدام الخدمة لتوليد رموز تحتوي على روابط ضارة أو احتيالية.</p>
+                    <h3 data-i18n="terms_title_2">إخلاء المسؤولية</h3>
+                    <p data-i18n="terms_desc_2">يتم تقديم الخدمة "كما هي" دون أي ضمانات صريحة أو ضمنية. المستخدم هو المسؤول عن صحة المحتوى المدمج في الرموز.</p>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="section">
+                <h2><i class="fa-solid fa-circle-info inline-style-7"></i> <span data-i18n="nav_about">من نحن</span></h2>
+                <div class="how-to-card inline-style-8">
+                    <h3 data-i18n="about_title_1">عن المنصة</h3>
+                    <p data-i18n="about_desc_1">QR Pro Tools هي أداة احترافية خفيفة وسريعة مصممة لتقديم حلول QR متكاملة وبسيطة للمستخدمين والشركات مع تركيز كامل على السرعة والأمان.</p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h2><i class="fa-solid fa-envelope inline-style-7"></i> <span data-i18n="nav_contact">اتصل بنا</span></h2>
+                <form class="inline-style-8 js-event-33">
+                    <div class="form-group">
+                        <label data-i18n="lbl_fname">الاسم</label>
+                        <input type="text" id="contactName" required placeholder="اسمك الكامل">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="lbl_email">البريد الإلكتروني</label>
+                        <input type="email" id="contactEmail" required placeholder="name@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="lbl_email_body">الرسالة</label>
+                        <textarea id="contactMsg" required placeholder="اكتب رسالتك هنا..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="btn_send">إرسال الرسالة</button>
+                </form>
+            </section>
+
+        </main>
+
+        <div class="container inline-style-17">
+            <div class="ad-slot-wrapper">
+                <span class="ad-label" data-i18n="ad_label">إعلان / Advertisement</span>
+                <div class="ad-placeholder lazy-ad" data-ad-slot="footer-top">
+                    <ins class="adsbygoogle inline-final-217009"
+                        
+                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                         data-ad-slot="1234567893"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <span>مساحة إعلانية أسفل الموقع (Bottom Banner)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+</div>
+
+    <!-- Floating Elements -->
+    <button class="js-event-34" id="backToTop" aria-label="أعلى الصفحة">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check inline-style-18"></i>
+        <span id="toastMsg">تمت العملية بنجاح</span>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <p data-i18n="cookie_msg">نستخدم ملفات تعريف الارتباط المحلية لتحسين تجربتك وحفظ تفضيلاتك (مثل الوضع الداكن واللغة).</p>
+            <div class="cookie-actions">
+                <button class="btn btn-sm btn-primary js-event-35" data-i18n="cookie_accept">موافق</button>
+                <button class="btn btn-sm btn-secondary js-event-36" data-i18n="cookie_reject">رفض</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="footer-brand"><i class="fa-solid fa-qrcode"></i><span>QR Pro Tools</span></a>
+        <p class="footer-desc">منصة متكاملة وسريعة لإنشاء وفحص رموز QR بكل سهولة وأمان.</p>
+      </div>
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
+          <li><a href="index.html#decoder"><i class="fa-solid fa-qrcode"></i> فحص الرمز</a></li>
+          <li><a href="index.html#generator"><i class="fa-solid fa-wand-magic-sparkles"></i> إنشاء رمز</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>الصفحات الأساسية</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+          <li><a href="privacy.html">سياسة الخصوصية</a></li>
+          <li><a href="terms.html">شروط الاستخدام</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 QR Pro Tools. جميع الحقوق محفوظة.</div>
+  </div>
+</footer>
+
+</body>
+</html>

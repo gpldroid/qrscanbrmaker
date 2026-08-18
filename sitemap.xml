@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    
+    <!-- ========================================================== -->
+    <!-- الصفحة الرئيسية -->
+    <!-- ========================================================== -->
+    <url>
+        <loc>https://tfiles.free.nf/</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://tfiles.free.nf/" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tfiles.free.nf/index-en.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    </url>
+
+    <!-- ========================================================== -->
+    <!-- صفحة من نحن -->
+    <!-- ========================================================== -->
+    <url>
+        <loc>https://tfiles.free.nf/about.html</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://tfiles.free.nf/about.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tfiles.free.nf/about-en.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    </url>
+
+    <!-- ========================================================== -->
+    <!-- صفحة اتصل بنا -->
+    <!-- ========================================================== -->
+    <url>
+        <loc>https://tfiles.free.nf/contact.html</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://tfiles.free.nf/contact.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tfiles.free.nf/contact-en.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    </url>
+
+    <!-- ========================================================== -->
+    <!-- صفحة سياسة الخصوصية -->
+    <!-- ========================================================== -->
+    <url>
+        <loc>https://tfiles.free.nf/privacy.html</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://tfiles.free.nf/privacy.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tfiles.free.nf/privacy-en.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    </url>
+
+    <!-- ========================================================== -->
+    <!-- صفحة سياسة الاستخدام -->
+    <!-- ========================================================== -->
+    <url>
+        <loc>https://tfiles.free.nf/terms.html</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://tfiles.free.nf/terms.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tfiles.free.nf/terms-en.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    </url>
+
+    <!-- ========================================================== -->
+    <!-- صفحة خريطة الموقع -->
+    <!-- ========================================================== -->
+    <url>
+        <loc>https://tfiles.free.nf/sitemap.html</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://tfiles.free.nf/sitemap.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://tfiles.free.nf/sitemap-en.html" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
+    </url>
+
+    <!-- ========================================================== -->
+    <!-- روابط الصفحات الرئيسية (Sections) -->
+    <!-- ========================================================== -->
+    
+    <!-- قسم إنشاء رمز QR -->
+    <url>
+        <loc>https://tfiles.free.nf/#generator</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- قسم فحص رمز QR -->
+    <url>
+        <loc>https://tfiles.free.nf/#decoder</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- قسم دليل الاستخدام -->
+    <url>
+        <loc>https://tfiles.free.nf/#howToGuide</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- ========================================================== -->
+    <!-- ملفات CSS و JavaScript (لتحسين الفهرسة) -->
+    <!-- ========================================================== -->
+    <url>
+        <loc>https://tfiles.free.nf/style.css</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+    <url>
+        <loc>https://tfiles.free.nf/script.js</loc>
+        <lastmod>2026-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.1</priority>
+    </url>
+
+</urlset>

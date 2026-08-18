@@ -1,0 +1,12 @@
+# السماح لجميع محركات البحث بفهرسة الموقع بالكامل
+User-agent: *
+Allow: /
+
+# خريطة الموقع
+Sitemap: https://domain.com/sitemap.xml
+
+# منع فهرسة الملفات غير المهمة فقط
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /admin/
+Disallow: /temp/
